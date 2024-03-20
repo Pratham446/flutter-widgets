@@ -23,10 +23,10 @@ class _datesState extends State<dates> {
             ElevatedButton(
               onPressed: () {
                 setState((){
-
+                 print("Current Time")
                 });
               },
-              child: Text("click"),
+              child: Text("Click"),
             )
           ],
         ),

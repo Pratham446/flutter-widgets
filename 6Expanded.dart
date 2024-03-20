@@ -11,18 +11,7 @@ class expanded extends StatelessWidget {
           width: 200,
           height: 200,
           decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
-          child: Card(
-            
-              elevation: 10,
-              child: Center(
-                child: Text(
-                  "hello",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              )),
-        ),
-      ),
-    );
+          child: 
     //  Expanded(
     //    child: Container(
     //         width: 50,
