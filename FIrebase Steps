@@ -1,0 +1,81 @@
+Firebase cli to window Installation Steps –
+1)	Install Nodejs 
+2)	In your c drive go to app data and roming / npm  copy the path and paste in environmental variable
+3)	Go to local -> pub -> cache -> bin  copy the path and paste in environmental
+4)	Open firebase console and create new project 
+5)	Go to firebase  cli and npm 
+Step 1- npm install -g firebase-tools
+
+Now test weather cli is integrated or not 
+Step 2 firebase login
+
+Step 3 firebase projects:list        -> this will list all the projects 
+
+6)	Click next and run     dart pub global activate flutterfire_cli   on cmd
+7)	Add this flutterfire configure --project=login-auth-a5afd     to your project root file in editor
+8)	Application id –android/app/build.gradle 
+9)	Check the id in –android /app/google-service to ensure connectivity of your project
+10)	Add firebase core package in pubspec yaml
+11)	Copy the firebase code and paste in main.dart
+12)	Initialize widgetflutterbinding-      WidgetsFlutterBinding.ensureInitialized();
+
+Connecting firebase with our flutter app	
+firebase 
+1) create a firebase file and run firebase login
+2) copy dart pub global activate flutterfire_cli and paste
+3) copy flutterfire configure --project=loginfirebase-f957e and paste 
+4) go to android app buildgradle and see the namespace package name 
+5) copy the code and initialize it just before main function
+
+
+
+
+
+
+
+
+
+
+
+signup page 
+
+7) initialize 
+FirebaseAuth _auth=FirebaseAuth.instance; in signup before the controller 
+7) Create a function for signup 
+8) Future<void> _signUp() async {
+if (_formfield.currentState!.validate()) {
+try {
+await _auth.createUserWithEmailAndPassword(
+
+email: email.text.trim(),
+password: password.text.trim(),
+);
+Navigator.of(context).pushReplacement(
+MaterialPageRoute(builder: (context) => home()),
+);
+} catch (e) {
+ScaffoldMessenger.of(context).showSnackBar(
+SnackBar(content: Text("kindly fill proper detail",selectionColor: Colors.red
+,)),
+);
+}
+}
+
+login page 
+
+step 1 initialize firebase 
+FirebaseAuth _auth =FirebaseAuth.instance; 
+
+step 2 create function for signing copy nd paste
+
+Future<void> _signin() async{
+if (_formfield.currentState!.validate()) {
+try {
+await _auth.signInWithEmailAndPassword(email: email.text, password: password.text);
+Navigator.of(context).pushReplacement(
+MaterialPageRoute(builder: (context) => home()),
+);
+} catch (e) {
+ScaffoldMessenger.of(context).showSnackBar(SnackBar( backgroundColor: Colors.red, content: Text("kindly fill proper detail",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+)),);
+}}}
