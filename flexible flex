@@ -1,0 +1,27 @@
+     Flexible(fit: FlexFit.tight,
+                    child: Container(child: Column(
+                    children: [Image(image: AssetImage("assets/shaving.png")),Text(" Classic Shaving")],
+                    
+                  ),
+                  height: 150,
+                  decoration: BoxDecoration(
+                      color: Colors.deepOrange.shade300,
+                      borderRadius: BorderRadius.circular(10)),
+                )),
+                SizedBox(
+                  width: 20,
+                ),
+                Flexible(fit: FlexFit.tight,
+                    child: Container(child: Column(
+                    children: [Image(image: AssetImage("assets/shaving.png")),Text(" Classic Shaving")],
+                    
+                  ),
+                  height: 150,
+                  color: Colors.deepOrange.shade300,
+                ))
+              ],
+            ),
+          ),
+
+
+          #### USE FLEXFIT TO COVER ENTIRE POROTION
