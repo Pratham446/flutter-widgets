@@ -1,0 +1,28 @@
+ Step 1   create a list on homescreen
+
+
+  final List<String> items = [
+  'Classic Shaving',
+  'Hair Washing',
+  'beard Trimming',
+  'Hair Cutiing',
+  'Face Facial',
+  'Kids HairCutting'
+];
+
+
+Step 2  
+
+onpressed =>
+ GestureDetector(onTap: (){ Navigator.push(context,MaterialPageRoute(builder: (context)=>Selectionscreem(text: items[1],)))
+
+
+Step 3
+
+create a string in selectinscreen page and add required 
+final String text; 
+
+ Text(
+          text,
+          style: TextStyle(fontSize: 24),
+        ),
