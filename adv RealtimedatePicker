@@ -1,0 +1,13 @@
+ DateTime selecteddatetime=DateTime.now();
+
+
+  Future datepicker(BuildContext context)async{
+    final DateTime? picked =await showDatePicker(context: context, firstDate: DateTime(2024), lastDate: DateTime(2025));
+    if (picked!=null && picked!=selecteddatetime) {
+      setState(() {
+        selecteddatetime=picked;
+      });
+    }
+  }
+
+Text("${selecteddatetime.day}/${selecteddatetime.month}/${selecteddatetime.year}",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
